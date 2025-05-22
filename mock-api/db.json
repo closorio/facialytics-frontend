@@ -1,0 +1,76 @@
+{
+  "detections": [
+    {
+      "faceId": "face-1",
+      "emotions": {
+        "joy": 0.85,
+        "sadness": 0.05,
+        "anger": 0.02,
+        "surprise": 0.03,
+        "fear": 0.01,
+        "disgust": 0.02,
+        "neutral": 0.02
+      },
+      "dominantEmotion": "joy",
+      "timestamp": "2023-11-15T10:30:00Z",
+      "boundingBox": {
+        "x": 100,
+        "y": 150,
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "faceId": "face-2",
+      "emotions": {
+        "joy": 0.10,
+        "sadness": 0.70,
+        "anger": 0.05,
+        "surprise": 0.05,
+        "fear": 0.05,
+        "disgust": 0.03,
+        "neutral": 0.02
+      },
+      "dominantEmotion": "sadness",
+      "timestamp": "2023-11-15T11:45:00Z",
+      "boundingBox": {
+        "x": 350,
+        "y": 120,
+        "width": 180,
+        "height": 180
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": "1",
+      "timestamp": "2023-11-15T10:30:00Z",
+      "dominantEmotion": "joy",
+      "emotions": {
+        "joy": 0.85,
+        "sadness": 0.05,
+        "anger": 0.02,
+        "surprise": 0.03,
+        "fear": 0.01,
+        "disgust": 0.02,
+        "neutral": 0.02
+      },
+      "imageSnapshot": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ..."
+    },
+    {
+      "id": "2",
+      "timestamp": "2023-11-15T11:45:00Z",
+      "dominantEmotion": "sadness",
+      "emotions": {
+        "joy": 0.10,
+        "sadness": 0.70,
+        "anger": 0.05,
+        "surprise": 0.05,
+        "fear": 0.05,
+        "disgust": 0.03,
+        "neutral": 0.02
+      },
+      "imageSnapshot": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ..."
+    }
+  ]
+}

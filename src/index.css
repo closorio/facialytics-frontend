@@ -1,0 +1,82 @@
+/* src/app.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: dark;
+    --color-primary: 79 70 229;
+    --color-secondary: 99 102 241;
+    --color-accent: 167 139 250;
+    --color-dark: 23 23 23;
+    --color-darker: 10 10 10;
+    --color-light: 245 245 245;
+  }
+
+  main .container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    padding: 1rem 0.8rem;
+  }
+  a:hover {
+    color: rgb(var(--color-secondary));
+    text-decoration: underline;
+  }
+  a:visited {
+    color: rgb(var(--color-accent));
+  }
+  a:active {
+    color: rgb(var(--color-light));
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* RealTime.tsx */
+  .card {
+    background-color: rgb(var(--color-dark));
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    margin: 1rem;
+    max-height: 740px;
+  }
+
+
+}
+
+@layer utilities {
+  .bg-dark {
+    background-color: rgb(var(--color-dark));
+  }
+  .bg-darker {
+    background-color: rgb(var(--color-darker));
+  }
+  .bg-light {
+    background-color: rgb(var(--color-light));
+  }
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+  .text-secondary {
+    color: rgb(var(--color-secondary));
+  }
+  .text-accent {
+    color: rgb(var(--color-accent));
+  }
+}
