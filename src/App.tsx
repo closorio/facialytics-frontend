@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import RealTimePage from "./pages/RealTime";
 import HistoryPage from "./pages/History";
-import DashboardPage from "./pages/Dashboard";
+import DashboardPage from "./pages/CaptureImage";
 
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-darker text-light">
+      <div>
         <Header />
         <main className="container">
           <Routes>
