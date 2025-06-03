@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Noto Sans', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
     color-scheme: dark;
     
     --color-primary: 79 70 229;
@@ -22,96 +22,18 @@
     --color-pineapleCream: 255 255 141;
   }
 
-  main .container {
-    max-width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  p {
-    color: var(--color-greenCH);
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    text-shadow: crimson;
-  }
-
-  a {
-    color: rgb(var(--color-primary));
-    text-decoration-line: none;
-    padding: 1rem 0.8rem;
-  }
-  a:hover {
-    color: rgb(var(--color-secondary));
-  }
-  a:visited {
-    color: rgb(var(--color-accent));
-  }
-  a:active {
-    color: rgb(var(--color-light));
-  }
-
   /* Smooth scroll */
   html {
     scroll-behavior:smooth;
     background-color: rgb(var(--color-dark));
     text-emphasis-color: rgb(var(--color-violet));
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }
 
 @layer components {
-  /* RealTime.tsx */
-  .card {
-    background-color: rgb(var(--color-secondary));
-    border-style:outset;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 40px 60px 150px rgba(13, 200, 233, 0.1), 0 2px 4px -1px rgba(44, 223, 169, 0.06);
-    transition: all 0.3s ease;
-    margin: 1%;
-    max-height: 740px;
-  }
-
 
 }
 
 @layer utilities {
-  .bg-dark {
-    background-color: rgb(var(--color-dark));
-  }
-  .bg-darker {
-    background-color: rgb(var(--color-darker));
-  }
-  .bg-light {
-    background-color: rgb(var(--color-light));
-  }
-  .bg-violet {
-    color: rgb(var(--color-violet));
-  }
-  .bg-cyan {
-    color: rgb(var(--color-cyan));
-  }
-  .bg-pineapleCream {
-    color: rgb(var(--color-pineapleCream));
-  }
-  .bg-greenCH {
-    color: rgb(var(--color-greenCH));
-  }
-  .bg-muted {
-    color: rgb(var(--color-muted));
-  }
-  .text-primary {
-    color: rgb(var(--color-primary));
-  }
-  .text-secondary {
-    color: rgb(var(--color-secondary));
-  }
-  .text-accent {
-    color: rgb(var(--color-accent));
-  }
-  .text-muted {
-    color: rgb(var(--color-muted));
-  }
   
 }
