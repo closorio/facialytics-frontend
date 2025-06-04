@@ -5,7 +5,6 @@ A modern React application for real-time emotion detection using AI, built with:
 - ⚡ Vite
 - 🏗️ TypeScript
 - 🎨 Tailwind CSS
-- 📊 Recharts
 
 ## Features
 

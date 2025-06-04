@@ -22,7 +22,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:!flex">
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-6 text-md">
               <li>
                 <Link
                   to="/"
@@ -95,11 +95,11 @@ const Header = () => {
             isMenuOpen ? "block" : "hidden"
           } mt-4 pb-4 transition-all duration-300`}
         >
-          <ul className="flex flex-col space-y-3">
+          <ul className="flex flex-col space-y-1">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
+                className="block py-1 px-4 text-gray-400 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Inicio
@@ -108,7 +108,7 @@ const Header = () => {
             <li>
               <Link
                 to="/realtime"
-                className="block py-2 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
+                className="block py-1 px-4 text-gray-400 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tiempo Real
@@ -117,7 +117,7 @@ const Header = () => {
             <li>
               <Link
                 to="/img-capture"
-                className="block py-2 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
+                className="block py-1 px-4 text-gray-400 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Captura de Imagen
@@ -126,7 +126,7 @@ const Header = () => {
             <li>
               <Link
                 to="/history"
-                className="block py-2 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
+                className="block py-1 px-4 text-gray-400 hover:text-blue-500 hover:bg-gray-50 rounded transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Historial

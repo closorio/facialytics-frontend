@@ -8,7 +8,7 @@ const Home = () => {
             {/* Título principal */}
             <div className="flex flex-wrap justify-between gap-3 p-4">
               <h1 className="text-white tracking-light text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold leading-tight w-full sm:w-auto">
-                Documentación de Análisis de Emociones en Tiempo Real
+                Documentación FaceFeel AI
               </h1>
             </div>
 
@@ -48,8 +48,7 @@ const Home = () => {
                 </h2>
                 <p className="text-sm sm:text-base">
                   Bienvenido a la documentación del sistema de Análisis de
-                  Emociones en Tiempo Real. Esta herramienta utiliza
-                  inteligencia artificial para detectar y analizar emociones
+                  Emociones en Tiempo Real. Esta herramienta utiliza un modelo de inteligencia artificial basado en ResNet50v2 para detectar y analizar emociones
                   humanas a través de imágenes o flujo de video en tiempo real.
                 </p>
 
@@ -89,11 +88,6 @@ const Home = () => {
                       description:
                         "Revisa todos tus análisis previos organizados por fecha y resultados.",
                     },
-                    {
-                      title: "Exportar Datos",
-                      description:
-                        "Exporta tus resultados en formatos CSV o JSON para su posterior análisis.",
-                    },
                   ].map((feature, index) => (
                     <div
                       key={index}
@@ -111,7 +105,7 @@ const Home = () => {
               {/* Sección de API */}
               <section id="api" className="space-y-4">
                 <h2 className="text-lg sm:text-xl font-bold text-[#38e07b]">
-                  API Documentation
+                  Documentación de la API
                 </h2>
                 <p className="text-sm sm:text-base">
                   Nuestra API RESTful permite integrar el análisis de emociones
@@ -120,7 +114,7 @@ const Home = () => {
 
                 <div className="bg-[#1e272e] p-3 sm:p-4 rounded-lg overflow-x-auto">
                   <pre className="text-xs sm:text-sm text-[#38e07b]">
-                    {`POST /api/v1/analyze
+                    {`POST /api/v1/detection/process-image
 Content-Type: application/json
 Authorization: Bearer your_api_key
 
@@ -175,12 +169,7 @@ Authorization: Bearer your_api_key
                     {
                       question: "¿Cómo se procesan los datos de imagen?",
                       answer:
-                        "Todas las imágenes se procesan localmente en tu dispositivo y no se almacenan en nuestros servidores.",
-                    },
-                    {
-                      question: "¿Se requiere conexión a internet?",
-                      answer:
-                        "Solo es necesaria para la autenticación inicial y para algunas funciones avanzadas. El análisis básico funciona offline.",
+                        "Todas las imágenes se procesan en el servidor de pruebas y se visualizan tu dispositivo. Actualmente el sistema no cuenta con almacenamiento de datos en nuestros servidores.",
                     },
                   ].map((faq, index) => (
                     <div key={index} className="bg-[#2a363b] p-3 sm:p-4 rounded-lg">
