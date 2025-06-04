@@ -7,17 +7,17 @@ const HistoryPage = () => {
         <div className="flex flex-wrap justify-between gap-3 p-4">
           <div className="flex min-w-72 flex-col gap-3">
             <p className="text-white tracking-light text-[32px] font-bold leading-tight">
-              History
+              Historial
             </p>
             <p className="text-[#96c5a9] text-sm font-normal leading-normal">
-              Review past emotion analysis captures
+                Revisar capturas de análisis de emociones pasadas
             </p>
           </div>
         </div>
         <div className="flex gap-3 p-3 flex-wrap pr-4">
           <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#264532] pl-4 pr-2">
             <p className="text-white text-sm font-medium leading-normal">
-              Type
+              Tipo
             </p>
             <div
               className="text-white"
@@ -38,7 +38,7 @@ const HistoryPage = () => {
           </button>
           <button className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#264532] pl-4 pr-2">
             <p className="text-white text-sm font-medium leading-normal">
-              Dominant Emotion
+              Emoción Dominante
             </p>
             <div
               className="text-white"
@@ -69,7 +69,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 1
+                Captura 1
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Happy
@@ -86,7 +86,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 2
+                Captura 2
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Sad
@@ -103,7 +103,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 3
+                Captura 3
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Neutral
@@ -120,7 +120,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 4
+                Captura 4
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Angry
@@ -137,7 +137,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 5
+                Captura 5
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Surprised
@@ -154,7 +154,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 6
+                Captura 6
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Fearful
@@ -171,7 +171,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 7
+                Captura 7
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Disgusted
@@ -188,7 +188,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 8
+                Captura 8
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Happy
@@ -205,7 +205,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 9
+                Captura 9
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Sad
@@ -222,7 +222,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 10
+                Captura 10
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Neutral
@@ -239,7 +239,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 11
+                Captura 11
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Image - Angry
@@ -256,7 +256,7 @@ const HistoryPage = () => {
             ></div>
             <div>
               <p className="text-white text-base font-medium leading-normal">
-                Capture 12
+                Captura 12
               </p>
               <p className="text-[#96c5a9] text-sm font-normal leading-normal">
                 Video - Surprised
