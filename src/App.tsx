@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import RealTimePage from "./pages/RealTime";
 import HistoryPage from "./pages/History";
-import DashboardPage from "./pages/Dashboard";
+import ImageCapturePage from "./pages/ImageCapture";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-darker text-light">
+      <div>
         <Header />
-        <main className="container">
+        <main className="container mx-auto">
           <Routes>
-            <Route path="/" element={<RealTimePage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/realtime" element={<RealTimePage />} />
+            <Route path="/img-capture" element={<ImageCapturePage />} />
             <Route path="/history" element={<HistoryPage />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
           </Routes>
         </main>
       </div>

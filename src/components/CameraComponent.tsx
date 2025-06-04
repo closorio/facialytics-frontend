@@ -43,7 +43,7 @@ const CameraComponent = ({ onCapture, isProcessing }: CameraComponentProps) => {
   }, [stopAutoCapture, stopCamera]); // ← Todas las dependencias incluidas
 
   return (
-    <div className="bg-gray-800 p-4 rounded-lg shadow-lg">
+    <div className="bg-gray-500 p-4 rounded-lg shadow-lg">
       <div className="relative">
         <video
           ref={videoRef}
@@ -53,7 +53,7 @@ const CameraComponent = ({ onCapture, isProcessing }: CameraComponentProps) => {
           className="w-full h-auto rounded-lg border-2 border-primary-500"
         />
         {!isCameraOn && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+          <div className="absolute inset-0 flex items-center justify-center bg-lime-400 bg-opacity-50 rounded-sm">
             <button
               onClick={startCamera}
               className="btn-primary"

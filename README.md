@@ -1,18 +1,25 @@
-# React + TypeScript + Vite + Tailwind
+# Emotion Detection Frontend
 
-## Expanding the ESLint configuration
+A modern React application for real-time emotion detection using AI, built with:
 
-  npm install
+- ⚡ Vite
+- 🏗️ TypeScript
+- 🎨 Tailwind CSS
 
-  npm run dev
-  npm run mock-api
-  npm run dev-with-mock
+## Features
 
-```js
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "mock-api": "npx json-server mock-api/db.json --port 3001",
-    "dev-with-mock": "concurrently \"npm run mock-api\" \"vite\""
+- Real-time camera emotion analysis
+- Image capture and processing
+- Emotion history dashboard
+- Responsive design
+
+## Quick Start
+
+### Installation
+```bash
+npm install
+```
+### Development
+```bash
+npm run dev
 ```
