@@ -114,10 +114,10 @@ const ImageCapturePage = () => {
       // Enviar la solicitud
       const response = await fetch(
         // Consumiendo la API desde producción
-        "https://emotion-detection-apileo-184861052679.northamerica-south1.run.app/api/v1/detection/process-image",
-        /* descomenta para usar la API desde el docker"
-        http://localhost:8000/api/v1/detection/process-image",
-        */
+        "https://emotion-detection-api-915719002582.northamerica-south1.run.app/api/v1/detection/process-image",
+        // descomenta para usar la API desde el docker"
+        //"http://localhost:8000/api/v1/detection/process-image",
+        
         {
           method: "POST",
           body: formData,
