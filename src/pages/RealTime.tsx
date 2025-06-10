@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 
 // Tipos y configuraciones iniciales (se mantienen igual)
 type FaceBox = {
@@ -43,7 +43,7 @@ const TARGET_PROCESSING_FPS = 5;
 const MAX_QUEUE_SIZE = 3;
 
 // Configuración de react-modal para accesibilidad
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const RealTimePage = () => {
   // Referencias y estados (se mantienen igual)
@@ -142,11 +142,11 @@ const RealTimePage = () => {
 
       const response = await fetch(
         // Consumiendo la API desde producción
-        "https://emotion-detection-apileo-184861052679.northamerica-south1.run.app/api/v1/webcam/process-frame",
+        "https://emotion-detection-api-915719002582.northamerica-south1.run.app/api/v1/webcam/process-frame",
+
+        // descomenta para usar la API desde el docker"
+        //"http://localhost:8000/api/v1/webcam/process-frame",
         
-        /* descomenta para usar la API desde el docker"
-        http://localhost:8000/api/v1/detection/process-image",
-        */
         {
           method: "POST",
           body: formData,
@@ -184,14 +184,33 @@ const RealTimePage = () => {
     if (
       isProcessingFrameRef.current ||
       processingQueueRef.current.length >= MAX_QUEUE_SIZE ||
-      !canvasRef.current
+      !canvasRef.current ||
+      !videoRef.current
     ) {
       return;
     }
 
     const currentSequence = ++requestSequenceRef.current;
 
-    canvasRef.current.toBlob(
+    // Crear un canvas temporal
+    const tempCanvas = document.createElement("canvas");
+    tempCanvas.width = videoRef.current.videoWidth;
+    tempCanvas.height = videoRef.current.videoHeight;
+    const tempCtx = tempCanvas.getContext("2d");
+
+    if (!tempCtx) return;
+
+    // Dibujar solo la imagen del video (sin anotaciones)
+    tempCtx.drawImage(
+      videoRef.current,
+      0,
+      0,
+      tempCanvas.width,
+      tempCanvas.height
+    );
+
+    // Usar el canvas temporal para generar el blob
+    tempCanvas.toBlob(
       (blob) => {
         if (!blob) return;
 
@@ -211,7 +230,6 @@ const RealTimePage = () => {
       0.8
     );
   }, [processQueue]);
-
   const startProcessing = useCallback(() => {
     if (!processingIntervalRef.current) {
       processingIntervalRef.current = setInterval(() => {
@@ -423,23 +441,23 @@ const RealTimePage = () => {
   // Estilos personalizados para el modal
   const customModalStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      maxWidth: '500px',
-      width: '90%',
-      backgroundColor: '#1b2427',
-      border: '1px solid #366348',
-      borderRadius: '8px',
-      padding: '20px'
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      maxWidth: "500px",
+      width: "90%",
+      backgroundColor: "#1b2427",
+      border: "1px solid #366348",
+      borderRadius: "8px",
+      padding: "20px",
     },
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.7)',
-      zIndex: 50
-    }
+      backgroundColor: "rgba(0, 0, 0, 0.7)",
+      zIndex: 50,
+    },
   };
 
   return (
@@ -447,7 +465,7 @@ const RealTimePage = () => {
       <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
         <div className="flex flex-wrap justify-between gap-3 p-4">
           <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">
-           Análisis de Emociones en Tiempo Real
+            Análisis de Emociones en Tiempo Real
           </p>
         </div>
         <div className="p-4">
@@ -628,13 +646,12 @@ const RealTimePage = () => {
             (2) Desarrollo de algoritmos académicos
             <br />
             (3) Mejora de sistemas de reconocimiento emocional no comercial,
-            conforme a la Ley 1581 de 2012 y RGPD. 
+            conforme a la Ley 1581 de 2012 y RGPD.
             <br />
-            Mis datos serán anonimizados
-            y almacenados seguramente por máximo 3 años. Conservo todos los
-            derechos ARCO (acceso, rectificación, cancelación y oposición) y
-            puedo retirar este consentimiento enviando solicitud a
-            privacidad@facefeel.ai."
+            Mis datos serán anonimizados y almacenados seguramente por máximo 3
+            años. Conservo todos los derechos ARCO (acceso, rectificación,
+            cancelación y oposición) y puedo retirar este consentimiento
+            enviando solicitud a privacidad@facefeel.ai."
           </p>
         </div>
 
